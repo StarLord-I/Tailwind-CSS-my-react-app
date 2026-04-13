@@ -1,14 +1,17 @@
 import React from 'react'
+import { useState } from "react"
 import  Navbar from  "./components/Navbar";
 import Categories from './components/categories';
 import Product from './components/Product';
  function App() {
+
+   const [cart,setCart] = useState ([])
  
     return (
        <div>
-          <Navbar />
+          <Navbar cartCount={cart.length} />
           <Categories />
-          <Product />
+          <Product cart={cart} setCart={setCart} />
        </div>
   )
  }  
