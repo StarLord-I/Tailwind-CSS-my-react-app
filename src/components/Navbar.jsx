@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Navbar() {
+function Navbar({cartCount} ) {
   return (
    <div className="flex flex-col md:flex-row items-center justify-between px-6 py-3 bg-green-500 text-white gap-3">
        
@@ -24,7 +24,11 @@ function Navbar() {
 
         <div className="hidden md:flex items-center gap-6">
             <button className='hover:underline'>Login</button>
-            <button className="bg-white text-green-600 px-3 py-2 rounded-lg font-semibold ">Cart</button>
+            <button className="bg-white text-green-600 px-3 py-2 rounded-lg font-semibold ">
+              
+              Cart ({cartCount})
+
+            </button>
 
         </div>
 

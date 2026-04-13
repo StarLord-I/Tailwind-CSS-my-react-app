@@ -2,7 +2,7 @@ import React from 'react'
 import CategoryCard from './categoryCard';
 import ProductCard from './ProductCard';
 
-function Product() {
+function Product({cart, setCart}) {
   const products = [
     {
         id: 1,
@@ -40,7 +40,10 @@ function Product() {
                     key={index} 
                     title={item.title} 
                     price={item.price} 
-                    image={item.image} />
+                    image={item.image} 
+                    cart={cart}
+                    setCart={setCart}
+                    />
                 ))}
             </div>
 

@@ -1,6 +1,7 @@
 import React from 'react'
+import Product from './Product'
 
-function ProductCard({title, price, image}) {
+function ProductCard({title, price, image , cart, setCart}) {
   return (
     <div>
             <img src={image}
@@ -12,7 +13,9 @@ function ProductCard({title, price, image}) {
            <div>
               <span className='text-green-500 font-bold'>
                 ${price}</span>
-                <button className='bg-green-500 text-white px-3 py-1 rounded-lg ml-4'>Add to Cart</button>
+                <button 
+                  onClick={()=> setCart([...cart,Product]) }
+                className='bg-green-500 text-white px-3 py-1 rounded-lg ml-4'>Add to Cart</button>
            </div>
     </div>
 
