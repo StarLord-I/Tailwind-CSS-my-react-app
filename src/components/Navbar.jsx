@@ -26,7 +26,7 @@ function Navbar({cartCount} ) {
             <button className='hover:underline'>Login</button>
             <button className="bg-white text-green-600 px-3 py-2 rounded-lg font-semibold ">
               
-              Cart ({cartCount})
+              Cart ({cartCount ===0 ? "cart is empty": `${cartCount} items`})
 
             </button>
 
